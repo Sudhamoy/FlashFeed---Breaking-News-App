@@ -24,7 +24,7 @@ export const fetchNews=()=>{
     try{
       dispatch(fetchNewsLoading());
 
-      const res=await axios.get('https://newsapi.org/v2/everything?q=india&apiKey=daa379cf8e3b46e6a5d516707eea316f ');
+      const res=await axios.get('/v2/everything?q=india&apiKey=daa379cf8e3b46e6a5d516707eea316f');
 
       const filteredNews=res.data.articles.filter(article => article.title !== '[Removed]' && article.author !== null)
       dispatch(fetchNewsSuccess(filteredNews));
