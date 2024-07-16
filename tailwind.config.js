@@ -2,8 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        times: ['"Times New Roman"', 'serif'],
+      },
+    },
   },
   plugins: [],
+  variants: {},
 }
 
